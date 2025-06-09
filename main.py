@@ -87,11 +87,6 @@ class MorseGui:
         self.encode_radio.select()
         self.choose_mode()
 
-        # --------- Variables ---------#
-        self.text_to_encode = self.encode_field.get()
-        self.text_to_decode = self.decode_field.get()
-        self.output_text = self.output.cget("text")
-
     # --------- Scripts ---------#
 
     def encode_delete(self):
@@ -124,14 +119,14 @@ class MorseGui:
             self.decode_field.focus()
 
     def copy(self):
-        pyperclip.copy(self.output_text)
+        pyperclip.copy(self.output.cget("text"))
 
     def translation(self):
         if self.mode.get() == 0:
-            self.output.config(text=self.decoder.encode(message=self.text_to_encode))
+            self.output.config(text=self.decoder.encode(message=self.encode_field.get()))
 
         elif self.mode.get() == 1:
-            self.output.config(text=self.decoder.decode(message=self.text_to_decode))
+            self.output.config(text=self.decoder.decode(message=self.decode_field.get()))
 
 # --------- Run ---------#
 

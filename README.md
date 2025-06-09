@@ -4,6 +4,8 @@ A simple Morse Code translator built with Python and Tkinter.
 It can **encode** normal text to Morse code and **decode** it back.  
 All Morse symbols follow the **International Morse Code** standard.
 
+![MorseTranslatorPresentation](https://github.com/user-attachments/assets/4e59c4f4-d28c-489e-aabf-c78d08ff26ee)
+
 ---
 
 ## 🔍 Features
